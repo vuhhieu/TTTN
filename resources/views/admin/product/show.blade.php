@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Product
+                    Sản phẩm
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                    Xem, Thêm, Sửa, Xóa và Quản lý.
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 <div class="card-body display_data">
 
                     <div class="position-relative row form-group">
-                        <label for="" class="col-md-3 text-md-right col-form-label">Images</label>
+                        <label for="" class="col-md-3 text-md-right col-form-label">Hình ảnh</label>
                         <div class="col-md-9 col-xl-8">
                             <ul class="text-nowrap overflow-auto" id="images">
                                 @foreach($product->images as $item)
@@ -40,7 +40,7 @@
 
                     <div class="position-relative row form-group">
                         <label for="brand_id"
-                            class="col-md-3 text-md-right col-form-label">Brand</label>
+                            class="col-md-3 text-md-right col-form-label">Nhãn hiệu</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$product->brand->name}}</p>
                         </div>
@@ -48,14 +48,14 @@
 
                     <div class="position-relative row form-group">
                         <label for="product_category_id"
-                            class="col-md-3 text-md-right col-form-label">Category</label>
+                            class="col-md-3 text-md-right col-form-label">Phân loại</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$product->category->name}}</p>
                         </div>
                     </div>
                 
                     <div class="position-relative row form-group">
-                        <label for="name" class="col-md-3 text-md-right col-form-label">Name</label>
+                        <label for="name" class="col-md-3 text-md-right col-form-label">Tên sản phẩm</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$product->name}}</p>
                         </div>
@@ -63,7 +63,7 @@
 
                     <div class="position-relative row form-group">
                         <label for="price"
-                            class="col-md-3 text-md-right col-form-label">Price</label>
+                            class="col-md-3 text-md-right col-form-label">Giá</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{number_format($product->price)}}đ</p>
                         </div>
@@ -71,7 +71,7 @@
 
                     <div class="position-relative row form-group">
                         <label for="qty"
-                            class="col-md-3 text-md-right col-form-label">Qty</label>
+                            class="col-md-3 text-md-right col-form-label">Số lượng</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$product->productItems->sum('quantity')}}</p>
                         </div>
@@ -79,7 +79,7 @@
                     
                     <div class="position-relative row form-group">
                         <label for="Product code"
-                            class="col-md-3 text-md-right col-form-label">Product code</label>
+                            class="col-md-3 text-md-right col-form-label">Mã sản phẩm</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$product->product_code}}</p>
                         </div>
@@ -87,15 +87,15 @@
 
                     <div class="position-relative row form-group">
                         <label for="featured"
-                            class="col-md-3 text-md-right col-form-label">Featured</label>
+                            class="col-md-3 text-md-right col-form-label">Hiển thị</label>
                         <div class="col-md-9 col-xl-8">
-                            <p>{{ $product->featured == 1 ? 'True' : 'False' }}</p>
+                            <p>{{ $product->featured == 1 ? 'Có' : 'Không' }}</p>
                         </div>
                     </div>
 
                     <div class="position-relative row form-group">
                         <label for="description"
-                            class="col-md-3 text-md-right col-form-label">Description</label>
+                            class="col-md-3 text-md-right col-form-label">Mô tả</label>
                         <div class="col-md-9 col-xl-8">
                             <p>>{!!$product->description!!}</p>
                         </div>

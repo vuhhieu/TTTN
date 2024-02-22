@@ -29,8 +29,8 @@
                                 <div class="modal-body">
                                     <div class="h5 modal-title text-center">
                                         <h4 class="mt-2">
-                                            <div>Welcome back,</div>
-                                            <span>Please sign in to your account below.</span>
+                                            <div>Chào mừng quay trở lại,</div>
+                                            <span>Vui lòng đăng nhập để sử dụng.</span>
                                         </h4>
                                     </div>
                                     <form class="{{route('admin.loginPost')}}" method="POST">
@@ -59,7 +59,7 @@
                                         </div>
                                         <div class="modal-footer clearfix">
                                             <div class="float-right">
-                                                <button type="submit" class="btn btn-primary btn-lg">Login to Dashboard</button>
+                                                <button type="submit" class="btn btn-primary btn-lg">Đăng nhập</button>
                                             </div>
                                         </div>
                                         

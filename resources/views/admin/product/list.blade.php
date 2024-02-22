@@ -10,9 +10,9 @@
                         <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                     </div>
                     <div>
-                        Product
+                        Sản phẩm
                         <div class="page-title-subheading">
-                            View, create, update, delete and manage.
+                        Xem, Thêm, Sửa, Xóa và Quản lý.
                         </div> 
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                         <span class="btn-icon-wrapper pr-2 opacity-7">
                             <i class="fa fa-plus fa-w-20"></i>
                         </span>
-                        Create
+                        Thêm
                     </a>
                 </div>
             </div>
@@ -43,11 +43,11 @@
                             @csrf
                             <div class="input-group">
                                 <input type="search" name="search" id="search"
-                                    placeholder="Search everything" class="form-control">
+                                    placeholder="Tìm kiếm" class="form-control">
                                 <span class="input-group-append">
                                     <button type="submit" class="btn btn-primary">
                                         <i class="fa fa-search"></i>&nbsp;
-                                        Search
+                                        
                                     </button>
                                 </span>
                             </div>
@@ -59,12 +59,12 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">ID</th>
-                                    <th>Name / Brand</th>
-                                    <th class="text-center">Color</th>
-                                    <th class="text-center">Price</th>
-                                    <th class="text-center">Qty</th>
-                                    <th class="text-center">Featured</th>
-                                    <th class="text-center">Actions</th>
+                                    <th>Tên sản phẩm / Nhãn hàng</th>
+                                    <th class="text-center">Màu sắc</th>
+                                    <th class="text-center">Giá</th>
+                                    <th class="text-center">Số lượng</th>
+                                    <th class="text-center">Hiển thị</th>
+                                    <th class="text-center">Thao tác</th>
                                 </tr>
                             </thead>
 
@@ -98,18 +98,18 @@
                                         <td class="text-center">
                                             @if ($product->featured === 1)
                                                 <div class="badge badge-success mt-2">
-                                                    True
+                                                    Có
                                                 </div>
                                             @else
                                                 <div class="badge badge-danger mt-2">
-                                                    False
+                                                    Không
                                                 </div>
                                             @endif
                                         </td>
                                         <td class="text-center">
                                             <a href="{{route('product.show', $product)}}"
                                                 class="btn btn-hover-shine btn-outline-primary border-0 btn-sm">
-                                                Details
+                                                Chi tiết
                                             </a>
                                             <a href="{{route('product.edit', $product)}}" data-toggle="tooltip" title="Edit"
                                                 data-placement="bottom" class="btn btn-outline-warning border-0 btn-sm">
@@ -155,13 +155,13 @@
                             <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                                 <div>
                                     <p class="text-sm text-gray-700 leading-5">
-                                        Showing
+                                    Hiển thị từ
                                         <span class="font-medium">{{ $products->firstItem() }}</span>
-                                        to
+                                        đến
                                         <span class="font-medium">{{ $products->count()}}</span>
-                                        of
+                                        trong
                                         <span class="font-medium">{{$products->total()}}</span>
-                                        results
+                                        kết quả
                                     </p>
                                 </div>
                                 <div>

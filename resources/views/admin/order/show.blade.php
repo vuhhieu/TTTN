@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Order
+                    Đơn hàng
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                    Xem, Thêm, Sửa, Xóa và Quản lý.
                     </div>
                 </div>
             </div>
@@ -26,17 +26,17 @@
                 <div class="card-body display_data">
 
                     <div class="table-responsive">
-                        <h2 class="text-center">Products list</h2>
+                        <h2 class="text-center">Danh sách sản phẩm</h2>
                         <hr>
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Product</th>
-                                    <th class="text-center">Color</th>
-                                    <th class="text-center">Quantity</th>
+                                    <th>Sản phẩm</th>
+                                    <th class="text-center">Màu sắc</th>
+                                    <th class="text-center">Số lượng</th>
                                     <th class="text-center">Size</th>
-                                    <th class="text-center">Unit Price</th>
-                                    <th class="text-center">Total</th>
+                                    <th class="text-center">Đơn giá</th>
+                                    <th class="text-center">Tổng</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,11 +80,11 @@
 
 
 
-                    <h2 class="text-center mt-5">Order info</h2>
+                    <h2 class="text-center mt-5">Thông tin đơn hàng</h2>
                         <hr>
                     <div class="position-relative row form-group">
                         <label for="name" class="col-md-3 text-md-right col-form-label">
-                            Name
+                            Tên
                         </label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$order->name}}</p>
@@ -99,7 +99,7 @@
                     </div>
 
                     <div class="position-relative row form-group">
-                        <label for="phone" class="col-md-3 text-md-right col-form-label">Phone</label>
+                        <label for="phone" class="col-md-3 text-md-right col-form-label">Số điện thoại</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$order->phone}}</p>
                         </div>
@@ -107,7 +107,7 @@
 
                     <div class="position-relative row form-group">
                         <label for="address" class="col-md-3 text-md-right col-form-label">
-                            Address</label>
+                            Địa chỉ</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$order->address}}</p>
                         </div>
@@ -115,25 +115,25 @@
 
                     <div class="position-relative row form-group">
                         <label for="address" class="col-md-3 text-md-right col-form-label">
-                            Status</label>
+                            Tình trạng</label>
                         <div class="col-md-9 col-xl-8">
                             @if ($order->status === 0)
-                                <p>Cancel</p>
+                                <p>Hủy</p>
                             @elseif ($order->status === 1)
-                                <p>Return</p>
+                                <p>Hoàn trả</p>
                             @elseif ($order->status === 2)
-                                <p>Pending</p>
+                                <p>Chờ</p>
                             @elseif ($order->status === 3)
-                                <p>In progress</p>
+                                <p>Đang xử lý</p>
                             @else
-                                <p>Delivered</p>
+                                <p>Đã vận chuyển</p>
                             @endif
                         </div>
                     </div>
 
                     <div class="position-relative row form-group">
                         <label for="address" class="col-md-3 text-md-right col-form-label">
-                            Payment</label>
+                            Hình thức thanh toán</label>
                         <div class="col-md-9 col-xl-8">
                             <p>{{$order->payment == 1 ? 'VNPay' : 'COD'}}</p>
                         </div>

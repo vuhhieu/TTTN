@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Category
+                Danh mục sản phẩm
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                    Xem, tạo, cập nhật, xóa và quản lý.
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                     <span class="btn-icon-wrapper pr-2 opacity-7">
                         <i class="fa fa-plus fa-w-20"></i>
                     </span>
-                    Create
+                    Thêm
                 </a>
             </div>
         </div>
@@ -44,8 +44,8 @@
                         <thead>
                             <tr>
                                 <th class="text-center">ID</th>
-                                <th>Name</th>
-                                <th class="text-center">Actions</th>
+                                <th>Tên sản phẩm</th>
+                                <th class="text-center">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,13 +106,13 @@
                         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                             <div>
                                 <p class="text-sm text-gray-700 leading-5">
-                                    Showing
+                                    Hiển thị từ
                                     <span class="font-medium">1</span>
-                                    to
+                                    đến
                                     <span class="font-medium">5</span>
-                                    of
+                                    trong
                                     <span class="font-medium">9</span>
-                                    results
+                                    kết quả
                                 </p>
                             </div>
 

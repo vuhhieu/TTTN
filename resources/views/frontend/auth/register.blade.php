@@ -23,9 +23,9 @@
                 <div id="login-box" class="col-md-12 shadow-none p-3 mb-5 bg-light rounded">
                     <form id="login-form" class="form" action="{{route('registerPost')}}" method="post">
                         @csrf
-                        <h3 class="text-center text-primary">Register</h3>
+                        <h3 class="text-center text-primary">Đăng ký</h3>
                         <div class="form-group">
-                            <label for="username" class="text-dark">Username:</label><br>
+                            <label for="username" class="text-dark">Họ tên:</label><br>
                             <input type="text" name="username" id="username" class="form-control">
                             @error('username')
                                 <p class="text-danger">{{$message}}</p>
@@ -39,14 +39,14 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-dark">Password:</label><br>
+                            <label for="password" class="text-dark">Mật khẩu:</label><br>
                             <input type="password" name="password" id="password" class="form-control">
                             @error('password')
                                 <p class="text-danger">{{$message}}</p>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password_confirmation" class="text-dark">Confirm password:</label><br>
+                            <label for="password_confirmation" class="text-dark">Nhập lại mật khẩu:</label><br>
                             <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                             @error('password_confirmation')
                                 <p class="text-danger">{{$message}}</p>
@@ -54,11 +54,11 @@
                         </div>
                         <div class="form-group">
                             <button type="submit"class="btn btn-primary btn-md" >
-                                Submit
+                                Đăng ký
                             </button>
                         </div>
                         <div id="register-link" class="text-right">
-                            <a href="{{route('login')}}" class="text-primary">Login here</a>
+                            <a href="{{route('login')}}" class="text-primary">Đăng nhập tại đây</a>
                         </div>
                     </form>
                 </div>

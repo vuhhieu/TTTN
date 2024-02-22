@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Order
+                    Đơn hàng
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                        Xem, Thêm, Sửa, Xóa và Quản lý.
                     </div>
                 </div>
             </div>
@@ -34,13 +34,13 @@
                         <thead>
                             <tr>
                                 <th class="text-center">ID</th>
-                                <th>Customer</th>
-                                <th class="text-center">Address</th>
-                                <th class="text-center">Phone</th>
-                                <th class="text-center">Payment method</th>
-                                <th class="text-center">Status</th>
-                                <th class="text-center">Total price</th>
-                                <th class="text-right">Actions</th>
+                                <th>Khách hàng</th>
+                                <th class="text-center">Địa chỉ</th>
+                                <th class="text-center">Số điện thoại</th>
+                                <th class="text-center">Hình thức thanh toán</th>
+                                <th class="text-center">Tình trạng</th>
+                                <th class="text-center">Tổng hóa đơn</th>
+                                <th class="text-right">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,18 +71,19 @@
                                         {{$order->phone}}
                                     </td>
                                     <td class="text-center">
+                                        
                                         {{ $order->payment == 1 ? 'VNPay' : 'COD'}}
                                     </td>
                                     @if($order->status == 0)
-                                        <td class="text-center"><span class="status cancel">Cancel</span></td>
+                                        <td class="text-center"><span class="status cancel">Hủy</span></td>
                                         @elseif($order->status == 1)
-                                        <td class="text-center"><span class="status return">Return</span></td>
+                                        <td class="text-center"><span class="status return">Hoàn trả</span></td>
                                         @elseif($order->status == 2)
-                                        <td class="text-center"><span class="status pending">Pending</span></td>
+                                        <td class="text-center"><span class="status pending">Chờ</span></td>
                                         @elseif($order->status == 3)
-                                        <td class="text-center"><span class="status inprogress">In progress</span></td>
+                                        <td class="text-center"><span class="status inprogress">Đang xử lý</span></td>
                                         @else
-                                        <td class="text-center"><span class="status delivered">Delivered</span></td>
+                                        <td class="text-center"><span class="status delivered">Đã vận chuyển</span></td>
                                         @endif
                                     <td class="text-center">{{number_format($order->total_price)}}đ</td>
                                     <td class="justify-content-end d-flex">
@@ -98,7 +99,7 @@
 
                                         <a href="{{route('order.show', $order)}}"
                                             class="btn btn-hover-shine btn-outline-primary border-0 btn-sm">
-                                            Details
+                                            Chi tiết
                                         </a>
                                     </td>
                                 </tr>
@@ -125,13 +126,13 @@
                         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                             <div>
                                 <p class="text-sm text-gray-700 leading-5">
-                                    Showing
+                                    Hiển thị từ
                                     <span class="font-medium">{{ $orders->firstItem() }}</span>
-                                    to
+                                    đến
                                     <span class="font-medium">{{ $orders->count()}}</span>
-                                    of
+                                    trong
                                     <span class="font-medium">{{$orders->total()}}</span>
-                                    results
+                                    Kết quả
                                 </p>
                             </div>
                             <div>

@@ -29,7 +29,7 @@
                     <form id="login-form" class="form" action="{{route('password.update')}}" method="post">
                         @csrf
                         <input type="hidden" name="token"  value="{{ $token}}">
-                        <h3 class="text-center text-primary">Reset Password</h3>
+                        <!-- <h3 class="text-center text-primary">Reset Password</h3> -->
                         <div class="form-group">
                             <input type="text" name="email" placeholder="email" class="form-control">
                             @error('email')

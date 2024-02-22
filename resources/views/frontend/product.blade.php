@@ -5,11 +5,11 @@
 <!-- Page Header Start -->
 <div class="container-fluid bg-secondary mb-5">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-        <h1 class="font-weight-semi-bold text-uppercase mb-3">Shop Detail</h1>
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Sản phẩm</h1>
         <div class="d-inline-flex">
-            <p class="m-0"><a href="{{route('home')}}">Home</a></p>
+            <p class="m-0"><a href="{{route('home')}}">Trang chủ</a></p>
             <p class="m-0 px-2">-</p>
-            <p class="m-0">Shop Detail</p>
+            <p class="m-0">Sản phẩm</p>
         </div>
     </div>
 </div>
@@ -55,11 +55,11 @@
                         <small class="fas fa-star-half-alt"></small>
                         <small class="far fa-star"></small>
                     </div>
-                    <small class="pt-1">(50 Reviews)</small>
+                    <small class="pt-1">(50 Đánh giá)</small>
                 </div>
                 <h3 class="font-weight-bold mb-4 text-danger">{{number_format($product->price)}}đ</h3>
-                <p class="mb-3">Product code: {{($product->product_code)}}</p>
-                <p class="mb-3">Products in stock: {{($product->productItems->sum('quantity'))}}</p>
+                <p class="mb-3">Mã sản phẩm: {{($product->product_code)}}</p>
+                <p class="mb-3">Còn lại: {{($product->productItems->sum('quantity'))}}</p>
                 @if($product->productItems->sum('quantity') > 0)
                 <div class="d-flex mb-4">
                     <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
@@ -93,16 +93,15 @@
                             </button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To
-                        Cart</button>
+                    <button type="submit" class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i>Thêm vào giỏ hàng</button>
                 </div>
                 @error('quantity')
                 <p style="margin-top:-20px;" class="text-danger">{{ $message }}</p>
                 @enderror
                 @else
-                <h1 class="text-danger ">Sold out</h1>
+                <h1 class="text-danger ">Đã hết hàng</h1>
                 @endif
-                <div class="d-flex pt-2">
+                <!-- <div class="d-flex pt-2">
                     <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
                     <div class="d-inline-flex">
                         <a class="text-dark px-2" href="">
@@ -118,35 +117,29 @@
                             <i class="fab fa-pinterest"></i>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </form>
         </div>
     </div>
     <div class="row px-xl-5">
         <div class="col">
             <div class="nav nav-tabs justify-content-center border-secondary mb-4">
-                <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Description</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Size guide</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a>
+                <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Miêu tả</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Hướng dẫn chọn size</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Nhận xét (0)</a>
             </div>
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab-pane-1">
-                    <h4 class="mb-3">Product Description</h4>
+                    <h4 class="mb-3">Mô tả sản phẩm</h4>
                     <p>{!!$product->description!!}</p>
                 </div>
                 <div class="tab-pane fade" id="tab-pane-2">
-                    <h4 class="mb-3">Additional Information</h4>
-                    <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt
-                        duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur
-                        invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet
-                        rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam
-                        consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam,
-                        ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr
-                        sanctus eirmod takimata dolor ea invidunt.</p>
+                    <h4 class="mb-3">Thông tin bổ sung</h4>
+                    <p><i><b>Hướng dẫn chọn size giày: CỠ GIÀY=N=L(Chiều dài bàn chân) + 1.5cm</p>
                     <div class="row">
                         <div class="col-md-6">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item px-0">
+                                <!-- <li class="list-group-item px-0">
                                     Sit erat duo lorem duo ea consetetur, et eirmod takimata.
                                 </li>
                                 <li class="list-group-item px-0">
@@ -157,12 +150,13 @@
                                 </li>
                                 <li class="list-group-item px-0">
                                     Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                </li>
+                                </li> -->
+                                <img src="https://cdn.tgdd.vn/Files/2021/04/08/1341628/huong-dan-chon-size-giay-chuan-phu-hop-voi-moi-doi-chan-202104080232126548.jpg">
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item px-0">
+                                <!-- <li class="list-group-item px-0">
                                     Sit erat duo lorem duo ea consetetur, et eirmod takimata.
                                 </li>
                                 <li class="list-group-item px-0">
@@ -173,12 +167,14 @@
                                 </li>
                                 <li class="list-group-item px-0">
                                     Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                </li>
+                                </li> -->
+                                <img src="https://cdn.tgdd.vn/Files/2021/04/08/1341628/huong-dan-chon-size-giay-chuan-phu-hop-voi-moi-doi-chan-202104080232430208.jpg">
+
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="tab-pane-3">
+                <!-- <div class="tab-pane fade" id="tab-pane-3">
                     <div class="row">
                         <div class="col-md-6">
                             <h4 class="mb-4">1 review for "Colorful Stylish Shirt"</h4>
@@ -211,7 +207,7 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </div>
-                            </div>
+                            </div> -->
                             <form>
                                 <div class="form-group">
                                     <label for="message">Your Review *</label>
@@ -242,7 +238,7 @@
 <!-- Products Start -->
 <div class="container-fluid py-5">
     <div class="text-center mb-4">
-        <h2 class="section-title px-5"><span class="px-2">You May Also Like</span></h2>
+        <h2 class="section-title px-5"><span class="px-2">Sản phẩm bạn có thể thích</span></h2>
     </div>
     <div class="row px-xl-5">
         <div class="col">
@@ -250,10 +246,11 @@
                 @foreach ($relatedProducts as $product)
                     <div class="card product-item border-0">
                         <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                            <img class="img-fluid w-100" src="{{ $product->images->shift()->image }}" alt="">
+                        <a href="{{route('product', $product)}}">0
+                            <img class="img-fluid w-100" src="{{ $product->images->shift()->image }}" alt=""> </a>
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">{{$product->name}}</h6>
+                        <a href="{{route('product', $product)}}">   <h6 class="text-truncate mb-3">{{$product->name}}</h6> </a>
                             <div class="d-flex justify-content-center">
                                 <h6>{{number_format($product->price)}}đ</h6>
                             </div>
@@ -261,7 +258,7 @@
                         <div class="card-footer d-flex justify-content-center bg-light border">
                             <a href="{{route('product', $product)}}" class="btn btn-sm text-dark p-0">
                                 <i class="fas fa-eye text-primary mr-1"></i>
-                                View Detail
+                                Xem chi tiết sản phẩm
                             </a>
                         </div>
                     </div>

@@ -27,9 +27,9 @@
                         <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                     </div>
                     <div>
-                        Product
+                        Sản phẩm
                         <div class="page-title-subheading">
-                            View, create, update, delete and manage.
+                            Thêm, Sửa, Xoá và Quản lý
                         </div>
                     </div> 
                 </div>
@@ -44,10 +44,10 @@
                             @csrf
                             <div class="position-relative row form-group">
                                 <label for="brand_id"
-                                    class="col-md-3 text-md-right col-form-label">Brand</label>
+                                    class="col-md-3 text-md-right col-form-label">Nhãn hiệu</label>
                                 <div class="col-md-9 col-xl-8">
                                     <select name="brand_id" id="brand_id" class="form-control">
-                                        <option value="">-- Brand --</option>
+                                        <option value="">-- Nhãn hiệu --</option>
                                         @foreach ($brands as $brand)
                                              <option {{ old('brand_id') == $brand->id ? "selected" : "" }} value="{{$brand->id}}">{{$brand->name}}</option>   
                                         @endforeach
@@ -60,10 +60,10 @@
 
                             <div class="position-relative row form-group">
                                 <label for="category_id"
-                                    class="col-md-3 text-md-right col-form-label">Category</label>
+                                    class="col-md-3 text-md-right col-form-label">Phân loại</label>
                                 <div class="col-md-9 col-xl-8">
                                     <select name="category_id" id="category_id" class="form-control">
-                                        <option value="">-- Category --</option>
+                                        <option value="">-- Phân loại --</option>
                                         @foreach ($categories as $category)
                                              <option {{ old('category_id') == $category->id ? "selected" : "" }} value="{{$category->id}}">{{$category->name}}</option>   
                                         @endforeach
@@ -75,7 +75,7 @@
                             </div>
                         
                             <div class="position-relative row form-group">
-                                <label for="name" class="col-md-3 text-md-right col-form-label">Name</label>
+                                <label for="name" class="col-md-3 text-md-right col-form-label">Tên sản phẩm</label>
                                 <div class="col-md-9 col-xl-8">
                                     <input name="name" id="name" placeholder="Name" type="text"
                                         class="form-control" value="{{old('name')}}">
@@ -87,7 +87,7 @@
 
                             <div class="position-relative row form-group">
                                 <label for="price"
-                                    class="col-md-3 text-md-right col-form-label">Price</label>
+                                    class="col-md-3 text-md-right col-form-label">Giá</label>
                                 <div class="col-md-9 col-xl-8">
                                     <input name="price" id="price"
                                         placeholder="Price" type="text" class="form-control" value="{{old('price')}}">
@@ -99,7 +99,7 @@
 
                             <div class="position-relative row form-group">
                                 <label for="color"
-                                    class="col-md-3 text-md-right col-form-label">Color</label>
+                                    class="col-md-3 text-md-right col-form-label">Màu sắc</label>
                                 <div class="col-md-9 col-xl-8">
                                     <input name="color" id="color"
                                         placeholder="Color" type="text" class="form-control" value="{{old('color')}}">
@@ -111,7 +111,7 @@
 
                             <div class="position-relative row form-group">
                                 <label for="sku"
-                                    class="col-md-3 text-md-right col-form-label">Product code</label>
+                                    class="col-md-3 text-md-right col-form-label">Mã sản phẩm</label>
                                 <div class="col-md-9 col-xl-8">
                                     <input name="product_code" id="product_code"
                                         placeholder="Product code" type="text" class="form-control" value="{{old('product_code')}}">
@@ -133,7 +133,7 @@
                                         @enderror
                                     </div>
                                     <label for="sku"
-                                        class="col-md-3 text-md-right col-form-label">Quantity</label>
+                                        class="col-md-3 text-md-right col-form-label">Số lượng</label>
                                     <div class="col-md-2 col-xl-2">
                                         <input name="quantities[]" id="quantity"
                                             placeholder="Quantity" type="number" class="form-control" >
@@ -153,18 +153,18 @@
                             
                             <div class="position-relative row form-group">
                                 <label for="featured"
-                                    class="col-md-3 text-md-right col-form-label">Featured</label>
+                                    class="col-md-3 text-md-right col-form-label">Hiển thị</label>
                                 <div class="col-md-9 col-xl-8">
                                     <div class="position-relative form-check pt-sm-2">
                                         <input {{ old('featured') == 1 ? 'checked' : '' }} name="featured" id="featured" type="checkbox" value="1" class="form-check-input">
-                                        <label for="featured" class="form-check-label">Featured</label>
+                                        <label for="featured" class="form-check-label">Hiển thị</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="position-relative row form-group">
                                 <label for="description"
-                                    class="col-md-3 text-md-right col-form-label">Description</label>
+                                    class="col-md-3 text-md-right col-form-label">Mô tả</label>
                                 <div class="col-md-9 col-xl-8">
                                     <textarea class="form-control" name="description" id="editor" >{{old('description')}}</textarea>
                                     @error('description')
@@ -173,10 +173,10 @@
                                 </div>
                             </div>
                             <div class="position-relative row form-group">
-                                <label for="" class="col-md-3 text-md-right col-form-label">Images</label>
+                                <label for="" class="col-md-3 text-md-right col-form-label">Hình ảnh</label>
                                 <div class="col-md-9 col-xl-8">
                                     <button class="btn border border-primary" type="button" id="addImageButton">
-                                        Add Image
+                                        Thêm hình ảnh
                                     </button>
                                     
                                     <div id="imageContainer"></div>
@@ -189,7 +189,7 @@
                                         <span class="btn-icon-wrapper pr-1 opacity-8">
                                             <i class="fa fa-times fa-w-20"></i>
                                         </span>
-                                        <span>Cancel</span>
+                                        <span>Hủy</span>
                                     </a>
 
                                     <button type="submit"
@@ -197,7 +197,7 @@
                                         <span class="btn-icon-wrapper pr-2 opacity-8">
                                             <i class="fa fa-download fa-w-20"></i>
                                         </span>
-                                        <span>Save</span>
+                                        <span>Lưu</span>
                                     </button>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@
                 <div id="login-box" class="col-md-12 shadow-none p-3 mb-5 bg-light rounded">
                     <form id="login-form" class="form" action="{{route('loginPost')}}" method="post">
                         @csrf
-                        <h3 class="text-center text-primary">Login</h3>
+                        <h3 class="text-center text-primary">Đăng nhập</h3>
                         @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
@@ -41,22 +41,22 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="password" class="text-dark">Password:</label><br>
+                            <label for="password" class="text-dark">Mật khẩu:</label><br>
                             <input type="password" name="password" id="password" class="form-control">
                             @error('password')
                                 <p class="text-danger">{{$message}}</p>
                             @enderror
                         </div>
                         <div class="form-group" >
-                            <a href="{{route('password.request')}}" class="text-primary">Forgot password?</a>
+                            <a href="{{route('password.request')}}" class="text-primary">Bạn đã quên mật khẩu?</a>
                         </div>
                         <div class="form-group">
                             <button type="submit"class="btn btn-primary btn-md" >
-                                Submit
+                                Đăng nhập
                             </button>
                         </div>
                         <div id="register-link" class="text-right">
-                            <a href="{{route('register')}}" class="text-primary">Register here</a>
+                            <a href="{{route('register')}}" class="text-primary">Đăng ký tại đây</a>
                         </div>
                     </form>
                 </div>

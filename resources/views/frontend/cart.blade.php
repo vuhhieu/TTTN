@@ -4,11 +4,11 @@
     <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">Shopping Cart</h1>
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">GiỎ HÀNG </h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="">Home</a></p>
+                <p class="m-0"><a href="">Trang chủ</a></p>
                 <p class="m-0 px-2">-</p>
-                <p class="m-0">Shopping Cart</p>
+                <p class="m-0">Giỏ hàng</p>
             </div>
         </div>
     </div>
@@ -30,12 +30,12 @@
                 <table class="table table-bordered text-center mb-0">
                     <thead class="bg-secondary text-dark">
                         <tr>
-                            <th>Name</th>
-                            <th>Price</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá</th>
                             <th>Size</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Remove</th>
+                            <th>Số lượng</th>
+                            <th>Giá</th>
+                            <th>Xoá</th>
                         </tr>
                     </thead>
                     <tbody class="align-middle">
@@ -89,24 +89,24 @@
             <div class="col-lg-4">
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
-                        <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+                        <h4 class="font-weight-semi-bold m-0">Thanh toán</h4>
                     </div>
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
+                            <h6 class="font-weight-medium">Giá</h6>
                             <h6 class="font-weight-medium">{{number_format(session('total_price'))}}đ</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">Free</h6>
+                            <h6 class="font-weight-medium">Vận chuyển</h6>
+                            <h6 class="font-weight-medium">Miễn phí</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">Total</h5>
+                            <h5 class="font-weight-bold">Tổng tiền</h5>
                             <h5 class="font-weight-bold">{{number_format(session('total_price'))}}đ</h5>
                         </div>
-                        <a href="{{route('checkout')}}" class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
+                        <a href="{{route('checkout')}}" class="btn btn-block btn-primary my-3 py-3">Thanh toán</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
         @else
             <h5 class="text-center">Không có sản phẩm nào!</h5>
             <div class="row justify-content-center">
-                <a href="{{route('shop')}}" class="btn btn-primary my-4">Continue shopping</a>
+                <a href="{{route('shop')}}" class="btn btn-primary my-4">Tiếp tục mua sắm</a>
             </div>
         @endif 
     </div>

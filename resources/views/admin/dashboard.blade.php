@@ -12,7 +12,7 @@
                     <div>
                         Dashboard
                         <div class="page-title-subheading">
-                            Statistics of products, orders, customers, order rate and store revenue.
+                        Thống kê sản phẩm, đơn hàng, khách hàng, tỷ lệ đặt hàng và doanh thu cửa hàng.
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,10 @@
             </div>
         </div>
 
-        <div class="cardBox">
+        <div>
+            <h1><b>CHÀO MỪNG BẠN ĐẾN VỚI TRANG ADMIN</h1>
+        </div>
+        <!-- <div class="cardBox">
             <div class="card">
                 <div>
                     <div class="numbers">{{ $data['total_product'] }}</div>
@@ -78,7 +81,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     @push('scripts')
     <script src="/assets/admin/js/chart.umd.min.js"></script>

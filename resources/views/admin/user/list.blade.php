@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    User
+                    Người dùng
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                       Thêm, sửa, xoá, cập nhật.
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                     <span class="btn-icon-wrapper pr-2 opacity-7">
                         <i class="fa fa-plus fa-w-20"></i>
                     </span>
-                    Create
+                    Thêm người dùng
                 </a>
             </div>
         </div>
@@ -42,12 +42,12 @@
                         <thead>
                             <tr>
                                 <th class="text-center">ID</th>
-                                <th>Username</th>
-                                <th class="text-center">Name</th>
+                                <th>UserName</th>
+                                <th class="text-center">Tên</th>
                                 <th class="text-center">Email</th>
-                                <th class="text-center">Phone</th>
-                                <th class="text-center">Address</th>
-                                <th class="text-center">Status</th>
+                                <th class="text-center">Số điện thoại</th>
+                                <th class="text-center">Địa chỉ</th>
+                                <th class="text-center">Trạng thái</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,20 +65,20 @@
                                         <input type="hidden" name="status" value="{{$user->status}}">
                                         @if ($user->status === 1)
                                             <button class="btn btn-hover-shine btn-outline-success border-0 btn-sm"
-                                                type="submit" data-toggle="tooltip" title="Lock"
+                                                type="submit" data-toggle="tooltip" title="Khoá tài khoản"
                                                 data-placement="bottom"
-                                                onclick="return confirm('Do you really want to lock this user?')">
+                                                onclick="return confirm('Bạn có thực sự muốn khóa người dùng này không?')">
                                                 <span class="btn-icon-wrapper opacity-8">
-                                                    Active
+                                                    Hoạt động
                                                 </span>
                                             </button>
                                         @else
                                             <button class="btn btn-hover-shine btn-outline-danger border-0 btn-sm"
-                                                type="submit" data-toggle="tooltip" title="Unlock"
+                                                type="submit" data-toggle="tooltip" title="Mở khoá tài khoản"
                                                 data-placement="bottom"
-                                                onclick="return confirm('Do you really want to unlock this user?')">
+                                                onclick="return confirm('Bạn có thực sự muốn mở khóa người dùng này?')">
                                                 <span class="btn-icon-wrapper opacity-8">
-                                                    Lock
+                                                    Khoá tài khoản
                                                 </span>
                                             </button>
                                         @endif
@@ -109,13 +109,13 @@
                         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                             <div>
                                 <p class="text-sm text-gray-700 leading-5">
-                                    Showing
+                                    Hiển thị 
                                     <span class="font-medium">{{ $users->firstItem() }}</span>
-                                    to
+                                    đến
                                     <span class="font-medium">{{ $users->count()}}</span>
-                                    of
+                                    trong
                                     <span class="font-medium">{{$users->total()}}</span>
-                                    results
+                                    kết quả
                                 </p>
                             </div>
                             <div>

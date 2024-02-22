@@ -10,9 +10,9 @@
                     <i class="pe-7s-ticket icon-gradient bg-mean-fruit"></i>
                 </div>
                 <div>
-                    Category
+                    Danh mục sản phẩm
                     <div class="page-title-subheading">
-                        View, create, update, delete and manage.
+                        Xem, tạo, cập nhật, xóa và quản lý.
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <form method="post" enctype="multipart/form-data" action="{{route('category.store')}}">
                         @csrf
                         <div class="position-relative row form-group">
-                            <label for="name" class="col-md-3 text-md-right col-form-label">Name</label>
+                            <label for="name" class="col-md-3 text-md-right col-form-label">Tên danh mục</label>
                             <div class="col-md-9 col-xl-8">
                                 <input required name="name" id="name" placeholder="Name" type="text"
                                     class="form-control" value="">
@@ -39,7 +39,7 @@
                                     <span class="btn-icon-wrapper pr-1 opacity-8">
                                         <i class="fa fa-times fa-w-20"></i>
                                     </span>
-                                    <span>Cancel</span>
+                                    <span>Bỏ qua</span>
                                 </a>
 
                                 <button type="submit"
@@ -47,7 +47,7 @@
                                     <span class="btn-icon-wrapper pr-2 opacity-8">
                                         <i class="fa fa-download fa-w-20"></i>
                                     </span>
-                                    <span>Save</span>
+                                    <span>Lưu lại</span>
                                 </button>
                             </div>
                         </div>

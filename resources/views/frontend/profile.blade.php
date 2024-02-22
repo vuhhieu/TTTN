@@ -83,8 +83,8 @@
                 <nav>
                     <div class="nav nav-tabs nav-fill">
                         <a href="{{route('profile')}}" class="nav-item nav-link text-primary {{ request()->segment(1) == 'profile' ? 'active' : ''}}">Proflie</a>
-                        <a href="{{route('order-history')}}" class="nav-item nav-link text-primary {{ request()->segment(1) == 'order-history' ? 'active' : ''}}" >Order history</a>
-                        <a href="{{route('profile.change-password')}}" class="nav-item nav-link text-primary {{ request()->segment(1) == 'change-password' ? 'active' : ''}}">Change password</a>
+                        <!-- <a href="{{route('order-history')}}" class="nav-item nav-link text-primary {{ request()->segment(1) == 'order-history' ? 'active' : ''}}" >Order history</a> -->
+                        <!-- <a href="{{route('profile.change-password')}}" class="nav-item nav-link text-primary {{ request()->segment(1) == 'change-password' ? 'active' : ''}}">Change password</a> -->
                     </div>
                 </nav>
                 <div class="tab-content" >
@@ -106,7 +106,7 @@
                                     <div class="info-account mb-3">
                                         <div class="row">
                                             <div class="col-3 text-right">
-                                                <label>Username</label>
+                                                <label>Tên đăng nhập</label>
                                             </div>
                                             <div class="col-9 text-start text-dark">
                                                 {{Auth::guard('web')->user()->username}}
@@ -116,7 +116,7 @@
                                     <div class="info-account mb-3">
                                         <div class="row align-items-center">
                                             <div class="col-3 text-right">
-                                                <label for="name">Name</label>
+                                                <label for="name">Tên</label>
                                             </div>
                                             <div class="col-9 text-start">
                                                 <input class="form-control" type="text" name="name" id="name" value="{{Auth::guard('web')->user()->name}}">
@@ -127,7 +127,7 @@
                                     <div class="info-account mb-3">
                                         <div class="row align-items-center">
                                             <div class="col-3 text-right">
-                                                <label for="phone">Phone</label>
+                                                <label for="phone">Số điện thoại</label>
                                             </div>
                                             <div class="col-9 text-start">
                                                 <input class="form-control" type="text" name="phone" id="phone" value="{{Auth::guard('web')->user()->phone}}">
@@ -137,7 +137,7 @@
                                     <div class="info-account mb-3">
                                         <div class="row align-items-center">
                                             <div class="col-3 text-right">
-                                                <label for="address">Address</label>
+                                                <label for="address">Địa chỉ</label>
                                             </div>
                                             <div class="col-9 text-start">
                                                 <input class="form-control" type="text" name="address" id="address" value="{{Auth::guard('web')->user()->address}}">
@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="text-center mb-5">
                                         <button type="submit"class="btn btn-primary btn-md" >
-                                            Submit
+                                            Thực hiện
                                         </button>
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                             <img src="{{ Auth::guard('web')->user()->avatar ?? '/assets/frontend/img/no-avatar.png' }}" id="user-avatar" alt="user-avatar">
                                         </div>
                                         <div class="user-avatar-btn text-primary">
-                                            <label for="avatar">Choose Image
+                                            <label for="avatar">Chọn hình ảnh
                                                 <input accept="image/png, image/jpg, image/jpeg" hidden onchange="previewImg(this,'user-avatar')" type="file" name="avatar" id="avatar">
                                             </label>
                                         </div>

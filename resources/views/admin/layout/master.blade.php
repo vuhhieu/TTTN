@@ -46,7 +46,7 @@
                     <form action="{{route('admin.logout')}}" method="post">
                         @csrf
                         <button type="submit">
-                            Log out
+                            Đăng xuất
                         </button>
                     </form>
                 </div>
@@ -85,7 +85,7 @@
 
                             <li class="mm-active">
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-plugin"></i>Applications
+                                    <i class="metismenu-icon pe-7s-plugin"></i>Ứng dụng
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
@@ -96,30 +96,30 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('user.index') }}" class="{{ request()->segment(2) == 'user' ? 'mm-active' : ''}}">
-                                            <i class="metismenu-icon"></i>User
+                                            <i class="metismenu-icon"></i>Người dùng
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{ route('order.index') }}" class="{{ request()->segment(2) == 'order' ? 'mm-active' : ''}}">
-                                            <i class="metismenu-icon"></i>Order
+                                            <i class="metismenu-icon"></i>Đơn hàng
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{ route('product.index') }}" class="{{ request()->segment(2) == 'product' ? 'mm-active' : ''}}">
-                                            <i class="metismenu-icon"></i>Product
+                                            <i class="metismenu-icon"></i>Sản phẩm
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{route('category.index')}}" class="{{ request()->segment(2) == 'category' ? 'mm-active' : ''}}">
-                                            <i class="metismenu-icon"></i>Category
+                                            <i class="metismenu-icon"></i>Danh mục
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{route('brand.index')}}" class="{{ request()->segment(2) == 'brand' ? 'mm-active' : ''}}">
-                                            <i class="metismenu-icon"></i>Brand
+                                            <i class="metismenu-icon"></i>Nhãn hàng
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="{{route('post_type.index')}}" class="{{ request()->segment(2) == 'post_type' ? 'mm-active' : ''}}">
                                             <i class="metismenu-icon"></i>Post type
                                         </a>
@@ -127,7 +127,7 @@
                                     <li>
                                         <a href="{{route('post.index')}}" class="{{ request()->segment(2) == 'post' ? 'mm-active' : ''}}">
                                             <i class="metismenu-icon"></i>Post
-                                        </a>
+                                        </a> -->
                                     </li>
                                 </ul>
                             </li>

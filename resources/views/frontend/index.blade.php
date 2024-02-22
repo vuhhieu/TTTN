@@ -13,12 +13,12 @@
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px">
                                     <h4 class="text-light text-uppercase font-weight-medium mb-3">
-                                        10% Off Your First Order
+                                        Giảm 10% cho đơn hàng đầu tiên
                                     </h4>
                                     <h3 class="display-4 text-white font-weight-semi-bold mb-4">
-                                        Quality Products
+                                       Sản phẩm chất lượng
                                     </h3>
-                                    <a href="{{route('shop')}}" class="btn btn-light py-2 px-3">Shop Now</a>
+                                    <a href="{{route('shop')}}" class="btn btn-light py-2 px-3">Mua ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                                     <h3 class="display-4 text-white font-weight-semi-bold mb-4">
                                         Reasonable Price
                                     </h3>
-                                    <a href="{{route('shop')}}" class="btn btn-light py-2 px-3">Shop Now</a>
+                                    <a href="{{route('shop')}}" class="btn btn-light py-2 px-3">Mua ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -58,25 +58,25 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                    <h5 class="font-weight-semi-bold m-0">Sản phẩm chất lượng</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                    <h5 class="font-weight-semi-bold m-0">Miễn phí vẫn chuyển</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                    <h5 class="font-weight-semi-bold m-0">Trả hàng trong 14 ngày</h5>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                     <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                    <h5 class="font-weight-semi-bold m-0">Hỗ trợ 24/7</h5>
                 </div>
             </div>
         </div>
@@ -86,24 +86,28 @@
     <!-- Products Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Highlight Products</span></h2>
+            <h2 class="section-title px-5"><span class="px-2"><label style="font-family:open sans">SẢN PHẨM NỔI BẬT</label></span></h2>
         </div>
         <div class="row px-xl-5 pb-3">
             @foreach($highLightProducts as $product)
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                        <a href="{{route('product', $product)}}">
                         <img class="img-fluid w-100" src="{{$product->images->first()->image}}" alt="">
+                        </a>
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                      <a href="{{route('product', $product)}}">
                         <h6 class="text-truncate mb-3">{{$product->name}} - {{$product->color}}</h6>
+                      </a>
                         <div class="d-flex justify-content-center">
                             <h6 class="text-danger font-weight-bold">{{number_format($product->price)}}đ</h6>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-center bg-light border">
                         <a href="{{route('product', $product)}}" class="btn btn-sm text-dark p-0">
-                            <i class="fas fa-eye text-primary mr-1"></i>View Detail
+                            <i class="fas fa-eye text-primary mr-1"></i>Xem chi tiết sản phẩm
                         </a>
                     </div>
                 </div>
@@ -120,9 +124,9 @@
                 <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
                     <img src="/assets/frontend/img/offer-1.png" alt="">
                     <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+                        <h5 class="text-uppercase text-primary mb-3">Giảm giá 30% cho tất cả đơn hàng muà hè</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="{{route('shop')}}" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                        <a href="{{route('shop')}}" class="btn btn-outline-primary py-md-2 px-md-3" ><label style="color: red; font-size: 25px;" for="hot"><b>Mua ngay</b></label></a>
                     </div>
                 </div>
             </div>
@@ -130,9 +134,9 @@
                 <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
                     <img src="/assets/frontend/img/offer-2.png" alt="">
                     <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+                        <h5 class="text-uppercase text-primary mb-3">Giảm giá 20% cho tất cả đơn hàng mùa đông</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
-                        <a href="{{route('shop')}}" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                        <a href="{{route('shop')}}" class="btn btn-outline-primary py-md-2 px-md-3"><label style="color: red; font-size: 25px;" for="hot"><b>Mua ngay</b></label></a>
                     </div>
                 </div>
             </div>
@@ -143,24 +147,28 @@
     <!-- Products Start -->
     <div class="container-fluid pt-5">
         <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">New Products</span></h2>
+            <h2 class="section-title px-5"><span class="px-2"><label style="font-family:open sans">SẢN PHẨM MỚI</label></span></h2>
         </div>
         <div class="row px-xl-5 pb-3">
             @foreach($products as $product)
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="{{$product->images->first()->image}}" alt="">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0" >
+                        <a href="{{route('product', $product)}}">
+                        <img class="img-fluid w-100" src="{{$product->images->first()->image}}" alt="" >
+                        </a>
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                        <h6 class="text-truncate mb-3">{{$product->name}} - {{$product->color}}</h6>
+                        <a href="{{route('product', $product)}}">
+                          <h6 class="text-truncate mb-3">{{$product->name}} - {{$product->color}}</h6>
+                        </a>
                         <div class="d-flex justify-content-center">
                             <h6 class="text-danger font-weight-bold">{{number_format($product->price)}}đ</h6>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-center bg-light border">
                         <a href="{{route('product', $product)}}" class="btn btn-sm text-dark p-0">
-                            <i class="fas fa-eye text-primary mr-1"></i>View Detail
+                            <i class="fas fa-eye text-primary mr-1"></i>Xem chi tiết sản phẩm
                         </a>
                     </div>
                 </div>
